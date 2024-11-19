@@ -44,8 +44,8 @@
   <div class="message" id="initialMessage">¿ME PERDONAS MI AMORCITA HERMOSA??</div>
   
   <div class="buttons" id="initialButtons">
-    <a href="#" id="yesButton" class="button">Sí</a>
-    <a href="#" id="noButton" class="button no">No</a>
+    <button id="yesButton" class="button">Sí</button>
+    <button id="noButton" class="button no">No</button>
   </div>
 
   <div class="message hidden" id="thankYouMessage">
@@ -63,8 +63,8 @@
   
   <div class="buttons hidden" id="sureButtons">
     <img src="https://i.imgur.com/wXq6hIn.gif" alt="Seguro GIF" style="width: 200px;">
-    <br><a href="#" id="yesButton2" class="button">Sí</a>
-    <a href="#" id="noButton2" class="button no">No</a>
+    <br><button id="yesButton2" class="button">Sí</button>
+    <button id="noButton2" class="button no">No</button>
   </div>
 
   <script>
@@ -78,7 +78,7 @@
       });
     }
 
-    // Al hacer clic en el botón "Sí" (primero)
+    // Al hacer clic en el botón "Sí" (primer botón)
     document.getElementById('yesButton').addEventListener('click', function(event) {
       event.preventDefault();
       // Oculta todo y muestra el GIF de agradecimiento con las opciones
@@ -88,7 +88,7 @@
       );
     });
 
-    // Al hacer clic en el botón "No" (primero)
+    // Al hacer clic en el botón "No" (primer botón)
     document.getElementById('noButton').addEventListener('click', function(event) {
       event.preventDefault();
       // Oculta todo y muestra el GIF de "Segura?" con las opciones
@@ -98,7 +98,7 @@
       );
     });
 
-    // Al hacer clic en el botón "Sí" (segundo)
+    // Al hacer clic en el botón "Sí" (segundo botón)
     document.getElementById('yesButton2').addEventListener('click', function(event) {
       event.preventDefault();
       // Oculta todo y muestra el mensaje final de agradecimiento
@@ -108,7 +108,7 @@
       );
     });
 
-    // Al hacer clic en el botón "No" (segundo)
+    // Al hacer clic en el botón "No" (segundo botón)
     document.getElementById('noButton2').addEventListener('click', function(event) {
       event.preventDefault();
       // Oculta todo y vuelve a mostrar el GIF y el mensaje de "¿Segura?"
