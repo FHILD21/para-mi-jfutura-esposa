@@ -78,43 +78,39 @@
       });
     }
 
-    // Al hacer clic en el botón "Sí" (primero)
+    // Al hacer clic en el botón "Sí" (primer paso)
     document.getElementById('yesButton').addEventListener('click', function(event) {
       event.preventDefault();
-      // Oculta todo y muestra el GIF de agradecimiento con las opciones
       toggleVisibility(
-        ['initialMessage', 'initialButtons', 'sureMessage', 'sureButtons'],  // Ocultar todos los elementos previos
-        ['thankYouMessage', 'thankYouButtons'] // Mostrar solo el mensaje y el GIF de "Te Amo"
+        ['initialMessage', 'initialButtons', 'sureMessage', 'sureButtons'], // Oculta todo lo previo
+        ['thankYouMessage', 'thankYouButtons'] // Muestra el mensaje de agradecimiento
       );
     });
 
-    // Al hacer clic en el botón "No" (primero)
+    // Al hacer clic en el botón "No" (primer paso)
     document.getElementById('noButton').addEventListener('click', function(event) {
       event.preventDefault();
-      // Oculta todo y muestra el GIF de "Segura?" con las opciones
       toggleVisibility(
-        ['initialMessage', 'initialButtons', 'thankYouMessage', 'thankYouButtons'],  // Ocultar todos los elementos previos
-        ['sureMessage', 'sureButtons']  // Mostrar solo el mensaje y el GIF de "Seguro"
+        ['initialMessage', 'initialButtons', 'thankYouMessage', 'thankYouButtons'], // Oculta todo lo previo
+        ['sureMessage', 'sureButtons'] // Muestra el mensaje "¿Segura?"
       );
     });
 
-    // Al hacer clic en el botón "Sí" (segundo)
+    // Al hacer clic en el botón "Sí" (segundo paso)
     document.getElementById('yesButton2').addEventListener('click', function(event) {
       event.preventDefault();
-      // Oculta todo y muestra el mensaje final de agradecimiento
       toggleVisibility(
-        ['sureMessage', 'sureButtons'],   // Ocultar mensaje y botones de "Segura?"
-        ['thankYouMessage', 'thankYouButtons']  // Mostrar mensaje de agradecimiento
+        ['sureMessage', 'sureButtons'], // Oculta el mensaje "¿Segura?" y sus botones
+        ['thankYouMessage', 'thankYouButtons'] // Muestra el mensaje de agradecimiento final
       );
     });
 
-    // Al hacer clic en el botón "No" (segundo)
+    // Al hacer clic en el botón "No" (segundo paso)
     document.getElementById('noButton2').addEventListener('click', function(event) {
       event.preventDefault();
-      // Oculta todo y vuelve a mostrar el GIF y el mensaje de "¿Segura?"
       toggleVisibility(
-        ['thankYouMessage', 'thankYouButtons'],  // Ocultar el mensaje de agradecimiento
-        ['sureMessage', 'sureButtons']  // Mostrar nuevamente el mensaje y los botones de "¿Segura?"
+        ['thankYouMessage', 'thankYouButtons'], // Oculta el mensaje de agradecimiento
+        ['sureMessage', 'sureButtons'] // Vuelve a mostrar el mensaje "¿Segura?"
       );
     });
   </script>
